@@ -130,45 +130,11 @@ function getAngle(x, y) {
 
 // Decides where to place the atom in the array
 function getAtomPosition() {
-  var spaces = [];
 
   for(i in currentAtoms) {
-    var j = parseInt(i) + 1;
-    var x, y;
-    var start, finish;
-    var obj;
 
-    x = currentAtoms[i].children('.atomCenter').offset().left;
-    y = currentAtoms[i].children('.atomCenter').offset().top;
-
-    console.log(x + ', ' + y);
-
-    start = Math.atan2(y, x);
-
-    if(j !== currentAtoms.length) {
-      x = cx - currentAtoms[j].children('.atomCenter').offset().left;
-      y = cy - currentAtoms[j].children('.atomCenter').offset().top;
-    } else {
-      x = cx - currentAtoms[0].children('.atomCenter').offset().left;
-      y = cy - currentAtoms[0].children('.atomCenter').offset().top;
-    }
-
-    finish = Math.atan2(y, x);
-
-    obj = {'start': start, 'finish': finish};
-
-    console.log(i + ': ' + start + ' - ' + finish);
-
-    spaces.push(obj);
   }
 
-  console.log(spaces);
-
-  for(i in spaces) {
-    if(spaces[i].start <  angle /*&& spaces[i].finish > angle*/) {
-      console.log(i);
-    }
-  }
 
   currentAtoms[0].css('background-color', 'red');
   currentAtoms[1].css('background-color', 'orange');
