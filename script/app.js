@@ -27,10 +27,8 @@ function ready() {
   $('body').on('click', function(e) {
 
       console.clear();
-      getCursorPos(e);
-      addToCurrentAtoms();
-      moveCursorBox(e);
-      //addAtom();
+      getAtomPosition(e);
+      addAtom();
 
   });
 
@@ -103,7 +101,7 @@ function findRadius() {
 }
 
 function populateBoard() {
-  for(var i = 0; i < 4; i++) {
+  for(var i = 0; i < 8; i++) {
     var atom = randomNum(1, 3);
     currentAtoms.push(addAtom(atom));
   }
@@ -118,38 +116,44 @@ function getCursorPos(e) {
   x = cx - x;
   y = cy - y;
   console.log('[Cursor] Relative position (' + x + ', ' + y +')');
-  getAngle(x, y);
+  var angle = getAngle(x, y);
+  console.log('[Mouse] Current angle from center point: ' + angle + ' radians');
+  return {'x': x, 'y': y, 'angle': angle};
 }
 
 // Returns the angle of the cursor relative to the center position
 function getAngle(x, y) {
   angle = Math.atan2(x, y);
-  console.log('[Mouse] Current angle from center point: ' + angle + ' radians');
-  getAtomPosition();
+  return angle;
 }
 
 // Decides where to place the atom in the array
-function getAtomPosition() {
+function getAtomPosition(e) {
+  var cursor;
+  var segments;
+  var angle;
 
-  for(i in currentAtoms) {
+  cursor = getCursorPos(e).angle + Math.PI;
+  segments = (Math.PI * 2) / currentAtoms.length;
 
+  for(var i = 1; i <= currentAtoms.length; i++) {
+    if(cursor < segments * i) {
+      console.log('[Atom Position] Adding atom after atom ' + i);
+      addToCurrentAtoms(i);
+      break;
+    }
   }
-
-
-  currentAtoms[0].css('background-color', 'red');
-  currentAtoms[1].css('background-color', 'orange');
-  currentAtoms[2].css('background-color', 'yellow');
-  currentAtoms[3].css('background-color', 'green');
-  currentAtoms[4].css('background-color', 'blue');
-  currentAtoms[5].css('background-color', 'purple');
-
 }
 
 // Adds newest atom to current atoms list
-function addToCurrentAtoms() {
+function addToCurrentAtoms(pos) {
   var atom = $('.newest');
-  //currentAtoms.push(atom);
-  //updateAtomRing();
+  if(pos) {
+    currentAtoms.splice(pos, 0, atom);
+  } else {
+    currentAtoms.push(atom);
+  }
+  updateAtomRing();
 }
 
 function updateAtomRing() {
@@ -167,7 +171,6 @@ function updateAtomRing() {
 function moveAtom(elem, angle) {
   var margin = ($('#ring').width() / 2) - ($('#ring').width() / 2) * .75;
   var radius = r - margin;
-  angle -= Math.PI / 2;
 
   elem.animate({
     'left': Math.sin(angle) * radius,
