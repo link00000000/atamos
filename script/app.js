@@ -13,8 +13,9 @@ $(function() {
 
 });
 
+// Executes after JSON files have been loaded
 function ready() {
-  var cx, cy, x, y, deg, r;
+  var cx, cy, r;
   var animationsFinished = true;
 
   findCenter();
@@ -25,10 +26,11 @@ function ready() {
 
   $('body').on('click', function(e) {
 
+      console.clear();
       getCursorPos(e);
-      getDeg();
       addToCurrentAtoms();
-      addAtom();
+      moveCursorBox(e);
+      //addAtom();
 
   });
 
@@ -57,7 +59,7 @@ function addAtom(atom) {
                     atoms.atoms[atom].symbol +
                     '</div><div class="number">'
                     + atom +
-                    '</div></div>');
+                    '</div><div class="atomCenter"></div></div>');
   $('.newest').animate({
     'width': '15%',
     'height': '15%',
@@ -101,7 +103,7 @@ function findRadius() {
 }
 
 function populateBoard() {
-  for(var i = 0; i < 6; i++) {
+  for(var i = 0; i < 4; i++) {
     var atom = randomNum(1, 3);
     currentAtoms.push(addAtom(atom));
   }
@@ -110,45 +112,100 @@ function populateBoard() {
 
 // Returns the current cursor position
 function getCursorPos(e) {
-  x = e.pageX;
-  y = e.pageY;
+  var x = e.pageX;
+  var y = e.pageY;
+  console.log('[Cursor] Position (' + x + ', ' + y +')');
+  x = cx - x;
+  y = cy - y;
+  console.log('[Cursor] Relative position (' + x + ', ' + y +')');
+  getAngle(x, y);
 }
 
-// Returns the degree of the cursor relative to the center position
-function getDeg() {
-  deg = Math.atan2(cy - y, cx - x);
-  console.log('[Mouse] Current degree from center point: ' + deg + 'deg');
+// Returns the angle of the cursor relative to the center position
+function getAngle(x, y) {
+  angle = Math.atan2(x, y);
+  console.log('[Mouse] Current angle from center point: ' + angle + ' radians');
+  getAtomPosition();
+}
+
+// Decides where to place the atom in the array
+function getAtomPosition() {
+  var spaces = [];
+
+  for(i in currentAtoms) {
+    var j = parseInt(i) + 1;
+    var x, y;
+    var start, finish;
+    var obj;
+
+    x = currentAtoms[i].children('.atomCenter').offset().left;
+    y = currentAtoms[i].children('.atomCenter').offset().top;
+
+    console.log(x + ', ' + y);
+
+    start = Math.atan2(y, x);
+
+    if(j !== currentAtoms.length) {
+      x = cx - currentAtoms[j].children('.atomCenter').offset().left;
+      y = cy - currentAtoms[j].children('.atomCenter').offset().top;
+    } else {
+      x = cx - currentAtoms[0].children('.atomCenter').offset().left;
+      y = cy - currentAtoms[0].children('.atomCenter').offset().top;
+    }
+
+    finish = Math.atan2(y, x);
+
+    obj = {'start': start, 'finish': finish};
+
+    console.log(i + ': ' + start + ' - ' + finish);
+
+    spaces.push(obj);
+  }
+
+  console.log(spaces);
+
+  for(i in spaces) {
+    if(spaces[i].start <  angle /*&& spaces[i].finish > angle*/) {
+      console.log(i);
+    }
+  }
+
+  currentAtoms[0].css('background-color', 'red');
+  currentAtoms[1].css('background-color', 'orange');
+  currentAtoms[2].css('background-color', 'yellow');
+  currentAtoms[3].css('background-color', 'green');
+  currentAtoms[4].css('background-color', 'blue');
+  currentAtoms[5].css('background-color', 'purple');
+
 }
 
 // Adds newest atom to current atoms list
 function addToCurrentAtoms() {
   var atom = $('.newest');
-  currentAtoms.push(atom);
-  updateAtomRing();
+  //currentAtoms.push(atom);
+  //updateAtomRing();
 }
 
 function updateAtomRing() {
   console.log('[Atoms] Current Atoms: ' + currentAtoms.length);
 
-  var dividedDegrees = 2 * Math.PI / currentAtoms.length;
+  var dividedAngle = 2 * Math.PI / currentAtoms.length;
 
   for(i in currentAtoms) {
-    moveAtom(currentAtoms[i], dividedDegrees * i);
+    moveAtom(currentAtoms[i], dividedAngle * i);
   }
 
 }
 
 // Moves the atom to a new location on ring
-function moveAtom(elem, degree) {
+function moveAtom(elem, angle) {
   var margin = ($('#ring').width() / 2) - ($('#ring').width() / 2) * .75;
   var radius = r - margin;
-  degree -= Math.PI / 2;
+  angle -= Math.PI / 2;
 
   elem.animate({
-    'left': Math.sin(degree) * radius,
-    'top': Math.cos(degree) * radius,
-    // 'left': Math.sin(deg) * radius,
-    // 'top': Math.cos(deg) * -radius,
+    'left': Math.sin(angle) * radius,
+    'top': Math.cos(angle) * radius,
   }, 200);
 }
 
@@ -156,6 +213,14 @@ function moveAtom(elem, degree) {
 function randomNum(min, max) {
   var num = Math.floor(Math.random() * (max - min + 1)) + min;
   return num;
+}
+
+//Moves the cursor box to the location of the cursor
+function moveCursorBox(e) {
+  $('#cursor').css({
+    'left': e.pageX,
+    'top': e.pageY,
+  });
 }
 
 // Checks all atoms for a background color.
@@ -176,13 +241,13 @@ function randomAtoms(num) {
   for(var i = 0; i < num; i++) {
     var xVar = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
     var yVar = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
-    var degree = Math.atan2(cy - yVar, cx - xVar) - Math.PI / 2;
+    var angle = Math.atan2(cy - yVar, cx - xVar) - Math.PI / 2;
     var margin = ($('#ring').width() / 2) - ($('#ring').width() / 2) * .75;
     var radius = r - margin;
 
     $('.newest').css({
-      'left': Math.sin(degree) * radius,
-      'top': Math.cos(degree) * -radius,
+      'left': Math.sin(angle) * radius,
+      'top': Math.cos(angle) * -radius,
     });
 
     addAtom();

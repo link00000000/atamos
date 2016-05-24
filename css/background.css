@@ -36,3 +36,10 @@ body {
  height: 80%;
  border-radius: 50%;
 }
+
+#cursor {
+  background-color: transparent !important;
+  width: 10px;
+  height: 10px;
+  position: fixed;
+}
