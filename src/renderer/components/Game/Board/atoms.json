@@ -1,0 +1,627 @@
+[
+  {
+	  "symbol": "NaN",
+	  "color": "#000000",
+	  "name": "NaN"
+	},
+	{
+	  "symbol": "H",
+	  "color": "#63b9d5",
+	  "name": "Hydrogen"
+	},
+	{
+	  "symbol": "He",
+	  "color": "#d1c991",
+	  "name": "Helium"
+	},
+	{
+	  "symbol": "Li",
+	  "color": "#4c6168",
+	  "name": "Lithium"
+	},
+	{
+	  "symbol": "Be",
+	  "color": "#c8c8c8",
+	  "name": "Beryllium"
+	},
+	{
+	  "symbol": "B",
+	  "color": "#7d5353",
+	  "name": "Boron"
+	},
+	{
+	  "symbol": "C",
+	  "color": "#3b3b3b",
+	  "name": "Carbon"
+	},
+	{
+	  "symbol": "N",
+	  "color": "#2cc6b2",
+	  "name": "Nitrogen"
+	},
+	{
+	  "symbol": "O",
+	  "color": "#6fec98",
+	  "name": "Oxygen"
+	},
+	{
+	  "symbol": "F",
+	  "color": "#ecc46f",
+	  "name": "Fluorine"
+	},
+	{
+	  "symbol": "Ne",
+	  "color": "#be0086",
+	  "name": "Neon"
+	},
+	{
+	  "symbol": "Na",
+	  "color": "#e69d7a",
+	  "name": "Sodium"
+	},
+	{
+	  "symbol": "Mg",
+	  "color": "#9e80ea",
+	  "name": "Magnesium"
+	},
+	{
+	  "symbol": "Al",
+	  "color": "#797979",
+	  "name": "Aluminum"
+	},
+	{
+	  "symbol": "Si",
+	  "color": "#4a4070",
+	  "name": "Silicon"
+	},
+	{
+	  "symbol": "P",
+	  "color": "#d7463f",
+	  "name": "Phosphorus"
+	},
+	{
+	  "symbol": "S",
+	  "color": "#375e7c",
+	  "name": "Sulfur"
+	},
+	{
+	  "symbol": "Cl",
+	  "color": "#6d1d7b",
+	  "name": "Chlorine"
+	},
+	{
+	  "symbol": "Ar",
+	  "color": "#9a3da5",
+	  "name": "Argon"
+	},
+	{
+	  "symbol": "K",
+	  "color": "#4d8946",
+	  "name": "Potassium"
+	},
+	{
+	  "symbol": "Ca",
+	  "color": "#f0f0f0",
+	  "name": "Calcium"
+	},
+	{
+	  "symbol": "Sc",
+	  "color": "#5fbb77",
+	  "name": "Scandium"
+	},
+	{
+	  "symbol": "Ti",
+	  "color": "#5a5a5a",
+	  "name": "Titanium"
+	},
+	{
+	  "symbol": "V",
+	  "color": "#5f9ebb",
+	  "name": "Vanadium"
+	},
+	{
+	  "symbol": "Cr",
+	  "color": "#a488b5",
+	  "name": "Chromium"
+	},
+	{
+	  "symbol": "Mn",
+	  "color": "#dc4a4a",
+	  "name": "Manganese"
+	},
+	{
+	  "symbol": "Fe",
+	  "color": "#ab967d",
+	  "name": "Iron"
+	},
+	{
+	  "symbol": "Co",
+	  "color": "#4371e6",
+	  "name": "Cobalt"
+	},
+	{
+	  "symbol": "Ni",
+	  "color": "#bac395",
+	  "name": "Nickel"
+	},
+	{
+	  "symbol": "Cu",
+	  "color": "#b95739",
+	  "name": "Copper"
+	},
+	{
+	  "symbol": "Zn",
+	  "color": "#b4b4b4",
+	  "name": "Zinc"
+	},
+	{
+	  "symbol": "Ga",
+	  "color": "#39b975",
+	  "name": "Gallium"
+	},
+	{
+	  "symbol": "Ge",
+	  "color": "#979273",
+	  "name": "Germanium"
+	},
+	{
+	  "symbol": "As",
+	  "color": "#738498",
+	  "name": "Arsenic"
+	},
+	{
+	  "symbol": "Se",
+	  "color": "#424242",
+	  "name": "Selenium"
+	},
+	{
+	  "symbol": "Br",
+	  "color": "#d4753c",
+	  "name": "Bromine"
+	},
+	{
+	  "symbol": "Kr",
+	  "color": "#3ca0d4",
+	  "name": "Krypton"
+	},
+	{
+	  "symbol": "Rb",
+	  "color": "#d22c1f",
+	  "name": "Rubidium"
+	},
+	{
+	  "symbol": "Sr",
+	  "color": "#ff9d29",
+	  "name": "Strontium"
+	},
+	{
+	  "symbol": "Y",
+	  "color": "#b129ff",
+	  "name": "Yttrium"
+	},
+	{
+	  "symbol": "Zr",
+	  "color": "#d6e43a",
+	  "name": "Zirconium"
+	},
+	{
+	  "symbol": "Nb",
+	  "color": "#75dceb",
+	  "name": "Niobium"
+	},
+	{
+	  "symbol": "Mo",
+	  "color": "#8ba38c",
+	  "name": "Molybdenum"
+	},
+	{
+	  "symbol": "Tc",
+	  "color": "#eea1e2",
+	  "name": "Technetium"
+	},
+	{
+	  "symbol": "Ru",
+	  "color": "#563e32",
+	  "name": "Ruthenium"
+	},
+	{
+	  "symbol": "Rh",
+	  "color": "#88d17a",
+	  "name": "Rhodium"
+	},
+	{
+	  "symbol": "Pd",
+	  "color": "#9eabbe",
+	  "name": "Palladium"
+	},
+	{
+	  "symbol": "Ag",
+	  "color": "#dcdcdc",
+	  "name": "Silver"
+	},
+	{
+	  "symbol": "Cd",
+	  "color": "#5560c8",
+	  "name": "Cadmium"
+	},
+	{
+	  "symbol": "In",
+	  "color": "#408d3c",
+	  "name": "Indium"
+	},
+	{
+	  "symbol": "Sn",
+	  "color": "#b5a47c",
+	  "name": "Tin"
+	},
+	{
+	  "symbol": "Sb",
+	  "color": "#c6598c",
+	  "name": "Antimony"
+	},
+	{
+	  "symbol": "Te",
+	  "color": "#827498",
+	  "name": "Tellurium"
+	},
+	{
+	  "symbol": "I",
+	  "color": "#ff00fc",
+	  "name": "Iodine"
+	},
+	{
+	  "symbol": "Xe",
+	  "color": "#7888ff",
+	  "name": "Xenon"
+	},
+	{
+	  "symbol": "Cs",
+	  "color": "#ffd478",
+	  "name": "Caesium"
+	},
+	{
+	  "symbol": "Ba",
+	  "color": "#e99c9c",
+	  "name": "Barium"
+	},
+	{
+	  "symbol": "La",
+	  "color": "#8bdbbe",
+	  "name": "Lanthanum"
+	},
+	{
+	  "symbol": "Ce",
+	  "color": "#ff9329",
+	  "name": "Cerium"
+	},
+	{
+	  "symbol": "Pr",
+	  "color": "#56e019",
+	  "name": "Praseodymium"
+	},
+	{
+	  "symbol": "Nd",
+	  "color": "#65898d",
+	  "name": "Neodymium"
+	},
+	{
+	  "symbol": "Pm",
+	  "color": "#2ee99b",
+	  "name": "Promethium"
+	},
+	{
+	  "symbol": "Sm",
+	  "color": "#bd6475",
+	  "name": "Samarium"
+	},
+	{
+	  "symbol": "Eu",
+	  "color": "#6c64bd",
+	  "name": "Europium"
+	},
+	{
+	  "symbol": "Gd",
+	  "color": "#6e1289",
+	  "name": "Gadolinium"
+	},
+	{
+	  "symbol": "Tb",
+	  "color": "#359c50",
+	  "name": "Terbium"
+	},
+	{
+	  "symbol": "Dy",
+	  "color": "#447ee7",
+	  "name": "Dysprosium"
+	},
+	{
+	  "symbol": "Ho",
+	  "color": "#e77d46",
+	  "name": "Holmium"
+	},
+	{
+	  "symbol": "Er",
+	  "color": "#bf4987",
+	  "name": "Erbium"
+	},
+	{
+	  "symbol": "Tm",
+	  "color": "#21426b",
+	  "name": "Thulium"
+	},
+	{
+	  "symbol": "Yb",
+	  "color": "#878750",
+	  "name": "Ytterbium"
+	},
+	{
+	  "symbol": "Lu",
+	  "color": "#d12c2c",
+	  "name": "Lutetium"
+	},
+	{
+	  "symbol": "Hf",
+	  "color": "#91d12c",
+	  "name": "Hafnium"
+	},
+	{
+	  "symbol": "Ta",
+	  "color": "#7f87Af",
+	  "name": "Tantalum"
+	},
+	{
+	  "symbol": "W",
+	  "color": "#2b6aa5",
+	  "name": "Tungsten"
+	},
+	{
+	  "symbol": "Re",
+	  "color": "#512f2f",
+	  "name": "Rhenium"
+	},
+	{
+	  "symbol": "Os",
+	  "color": "#307060",
+	  "name": "Osmium"
+	},
+	{
+	  "symbol": "Ir",
+	  "color": "#c9876a",
+	  "name": "Iridium"
+	},
+	{
+	  "symbol": "Pt",
+	  "color": "#505008",
+	  "name": "Platinum"
+	},
+	{
+	  "symbol": "Au",
+	  "color": "#edc474",
+	  "name": "Gold"
+	},
+	{
+	  "symbol": "Hg",
+	  "color": "#80a5ac",
+	  "name": "Mercury"
+	},
+	{
+	  "symbol": "Tl",
+	  "color": "#ac8089",
+	  "name": "Thallium"
+	},
+	{
+	  "symbol": "Pb",
+	  "color": "#3c7c66",
+	  "name": "Lead"
+	},
+	{
+	  "symbol": "Bi",
+	  "color": "#ff0506",
+	  "name": "Bismuth"
+	},
+	{
+	  "symbol": "Po",
+	  "color": "#ffff00",
+	  "name": "Polonium"
+	},
+	{
+	  "symbol": "At",
+	  "color": "#00ff00",
+	  "name": "Astatine"
+	},
+	{
+	  "symbol": "Rn",
+	  "color": "#dae83a",
+	  "name": "Radon"
+	},
+	{
+	  "symbol": "Fr",
+	  "color": "#ff6c00",
+	  "name": "Francium"
+	},
+	{
+	  "symbol": "Ra",
+	  "color": "#00ffff",
+	  "name": "Radium"
+	},
+	{
+	  "symbol": "Ac",
+	  "color": "#424918",
+	  "name": "Actinium"
+	},
+	{
+	  "symbol": "Th",
+	  "color": "#aa3d82",
+	  "name": "Thorium"
+	},
+	{
+	  "symbol": "Pr",
+	  "color": "#3daa82",
+	  "name": "Protactinium"
+	},
+	{
+	  "symbol": "U",
+	  "color": "#9cff00",
+	  "name": "Uranium"
+	},
+	{
+	  "symbol": "Np",
+	  "color": "#00aeff",
+	  "name": "Neptunium"
+	},
+	{
+	  "symbol": "Pu",
+	  "color": "#ff9000",
+	  "name": "Plutonium"
+	},
+	{
+	  "symbol": "Am",
+	  "color": "#813349",
+	  "name": "Americium"
+	},
+	{
+	  "symbol": "Cm",
+	  "color": "#ff79d0",
+	  "name": "Curium"
+	},
+	{
+	  "symbol": "Bk",
+	  "color": "#ae877e",
+	  "name": "Berkelium"
+	},
+	{
+	  "symbol": "Cf",
+	  "color": "#8f3cb4",
+	  "name": "Californium"
+	},
+	{
+	  "symbol": "Es",
+	  "color": "#86c4dc",
+	  "name": "Einsteinium"
+	},
+	{
+	  "symbol": "Fm",
+	  "color": "#bfdc86",
+	  "name": "Fermium"
+	},
+	{
+	  "symbol": "Md",
+	  "color": "#dc8686",
+	  "name": "Mendelevium"
+	},
+	{
+	  "symbol": "Nb",
+	  "color": "#ffd965",
+	  "name": "Nobelium"
+	},
+	{
+	  "symbol": "Lr",
+	  "color": "#5c24a0",
+	  "name": "Lawrencium"
+	},
+	{
+	  "symbol": "Rf",
+	  "color": "#6b6675",
+	  "name": "Rutherfordium"
+	},
+	{
+	  "symbol": "Db",
+	  "color": "#b05032",
+	  "name": "Dubnium"
+	},
+	{
+	  "symbol": "Sg",
+	  "color": "#254987",
+	  "name": "Seaborgium"
+	},
+	{
+	  "symbol": "Bh",
+	  "color": "#9bafa0",
+	  "name": "Bohrium"
+	},
+	{
+	  "symbol": "Hs",
+	  "color": "#ff562d",
+	  "name": "Hassium"
+	},
+	{
+	  "symbol": "Mt",
+	  "color": "#cdcd2c",
+	  "name": "Meitnerium"
+	},
+	{
+	  "symbol": "Ds",
+	  "color": "#3a7e48",
+	  "name": "Darmstadtium"
+	},
+	{
+	  "symbol": "Rg",
+	  "color": "#0000ff",
+	  "name": "Roentgenium"
+	},
+	{
+	  "symbol": "Cn",
+	  "color": "#aa4594",
+	  "name": "Copernicium"
+	},
+	{
+	  "symbol": "Nh",
+	  "color": "#8f8f8f",
+	  "name": "Nihonium"
+	},
+	{
+	  "symbol": "Fl",
+	  "color": "#2eede6",
+	  "name": "Flerovium"
+	},
+	{
+	  "symbol": "Mc",
+	  "color": "#beaf64",
+	  "name": "Moscovium"
+	},
+	{
+	  "symbol": "Lv",
+	  "color": "#f22e6a",
+	  "name": "Livermorium"
+	},
+	{
+	  "symbol": "Ts",
+	  "color": "#70ea78",
+	  "name": "Tennessine"
+	},
+	{
+	  "symbol": "Og",
+	  "color": "#ff00b9",
+	  "name": "Oganesson"
+	},
+	{
+	  "symbol": "Bn",
+	  "color": "#ede674",
+	  "name": "Bananium"
+	},
+	{
+	  "symbol": "Gb",
+	  "color": "#3de6c3",
+	  "name": "GravityBlockium"
+	},
+	{
+	  "symbol": "Bb",
+	  "color": "#309141",
+	  "name": "BreakingBadium"
+	},
+	{
+	  "symbol": "Pi",
+	  "color": "#4dc8e6",
+	  "name": "314159265359"
+	},
+	{
+	  "symbol": "Sir",
+	  "color": "#ff0000",
+	  "name": "Sirnicanium"
+	},
+	{
+	  "symbol": "Ea",
+	  "color": "#1177f5",
+	  "name": "Earthium"
+	}
+]

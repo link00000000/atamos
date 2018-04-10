@@ -1,6 +1,6 @@
 # atomas
 
-> A remake of the mobile game created by sirnic
+> A remake of the mobile game by sirnic
 
 #### Build Setup
 

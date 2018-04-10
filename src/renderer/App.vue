@@ -1,15 +1,25 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <game></game>
   </div>
 </template>
 
 <script>
+  import game from '@/components/Game'
+
   export default {
-    name: 'atomas'
+    name: 'atomas',
+    components: {
+      game
+    }
   }
 </script>
 
 <style>
-  /* CSS */
+   @import url('https://fonts.googleapis.com/css?family=Arimo');
+
+  :root {
+    --board-size: 80vmin;
+    --atom-size: calc(var(--board-size) * .1286);
+  }
 </style>
