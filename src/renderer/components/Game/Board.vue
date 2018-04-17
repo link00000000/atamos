@@ -1,8 +1,6 @@
 <template>
   <div class="board" v-on:click="moveAtom">
-    <div v-for="atom in atoms">
-      <atom v-bind:atomicNumber=atom.number :style="`left: ${atom.xOffset}px; top: ${atom.yOffset}px`"></atom> 
-    </div>
+    <atom v-for="atom in atoms" v-bind:atomicNumber=atom.number></atom> 
   </div>
 </template>
 
@@ -24,36 +22,19 @@ export default {
   methods: {
 
     moveAtom: function (e) {
-      var currentAtom = this.$children[this.$children.length - 1].$el
+      // var currentAtom = this.$children[this.$children.length - 1].$el
       var xPos = e.offsetX - e.target.offsetWidth / 2
       var yPos = e.offsetY - e.target.offsetHeight / 2
       var angle = Math.atan2(yPos, xPos)
-      var mag = e.target.offsetWidth / 2
-      var atomSize = currentAtom.offsetWidth / 2
-      var padding = 10
-      var xOffset = (mag - atomSize - padding) * Math.cos(angle) + mag
-      var yOffset = (mag - atomSize - padding) * Math.sin(angle) + mag
 
-      for (var i = 0; i < this.atoms.length - 1; i++) {
-        if (angle < this.atoms[i].angle) {
-          this.atoms.splice(i, 0, this.atoms[this.atoms.length - 1])
-          break
-        }
-      }
-      this.atoms.pop()
-
-      this.atoms[this.atoms.length - 1].angle = angle
-      this.atoms[this.atoms.length - 1].xOffset = xOffset
-      this.atoms[this.atoms.length - 1].yOffset = yOffset
-
-      this.atoms.sort((a, b) => a.angle - b.angle)
+      console.log(angle)
 
       this.spawnAtom()
     },
     spawnAtom: function () {
       var atomicNumber = Math.floor(Math.random() * 124) + 1
       this.atoms.push({number: atomicNumber, angle: 0})
-      console.log(this.atoms)
+      // console.log(this.atoms)
     }
   }
 }
